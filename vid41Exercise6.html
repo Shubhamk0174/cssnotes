@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen and (max-width: 1000px){
+            .navlist{
+                visibility: hidden;
+            
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        body {
+            margin-left: 5vw;
+            margin-right: 5vw;
+            overflow: scroll;
+        }
+
+        nav {
+            width: 80vw;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .logo {
+            margin: 20px auto 0px 30px;
+        }
+
+        .navlist {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            position: fixed;
+            right: 5vw;
+        }
+
+        .navitem {
+            margin: 35px 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+        }
+
+        .navicon {
+            margin: 35px 10px;
+cursor: pointer;
+        }
+
+
+        main {
+            width: 90vw;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+        }
+
+        main>div:first-child {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 3vw;
+        }
+
+        main>div:nth-child(2) {
+            margin: 0px 150px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.5vw;
+            text-align: center;
+        }
+
+        main > div:nth-child(3) > button{
+            height: 50px;
+            width: auto;
+
+            border: 1px solid white;
+            outline: none;
+            margin: 0;
+            padding: 10px 20px;
+            background-color: rgb(48, 190, 215);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- design a nav bar of the given site -->
+    <!-- https://www.ultraedit.com/downloads/ultraedit-download-thank-you/?utm_source=CWH&utm_medium=LeadsAcquisition&utm_content=UEDownload&utm_campaign=UETrialDownload -->
+
+    <nav>
+        <div class="logo">
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="UltraEdit"
+                height="55px">
+        </div>
+
+        <ul class="navlist">
+            <li class="navitem">Product <img src="down-arrow.png" height="17px" style="position: relative; top: 3.5px; left: 2px;"></li>
+            <li class="navitem">For Business<img src="down-arrow.png" height="17px" style="position: relative; top: 3.5px; left: 2px;"></li></li>
+            <li class="navitem">Resource<img src="down-arrow.png" height="17px" style="position: relative; top: 3.5px; left: 2px;"></li></li>
+            <li class="navitem">support<img src="down-arrow.png" height="17px" style="position: relative; top: 3.5px; left: 2px;"></li></li>
+            <li class="navitem">Our Company<img src="down-arrow.png" height="17px" style="position: relative; top: 3.5px; left: 2px;"></li></li>
+            <li class="navicon"><img src="language.png" alt="" height="30px"></li>
+            <li class="navicon"><img src="search.png" alt="" height="23px"></li>
+        </ul>
+
+    </nav>
+
+
+    <main>
+        <div>Download <b>UltraEdit</b> for Windows <img
+                src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt=""></div>
+        <div>Download and try UltraEdit before you buy it! This download includes the full Windows version of the text
+            editor.</div>
+        <div><button>DOWNLOAD MAC OR LINUX VERSION</button></div>
+
+    </main>
+
+</body>
+
+</html>

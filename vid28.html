@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position property</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 130px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+            border: 2px solid black; 
+        }
+
+        /* by default position is static */
+
+        .box1{
+            background-color: rgb(52, 252, 255);
+            /* absolute position means it will be positioned relative to its nearest position ancestio or parent */
+            position: absolute;
+            top: 0px;
+            left: 2px;
+        }
+        
+        .box2{
+            background-color: aliceblue;
+            /* postion relative is used to control the position relative to its default position */
+            position: relative;
+            top: 0px;
+            left: 20px;
+            /* z-index is used to set it forward or backward position wrt to other elements */
+            z-index: 1;
+        }
+
+        .box3{
+            background-color: antiquewhite;
+            height: 50px;
+            width: 50px;
+            /* position fixed fixes the positon of the element on the screen and there is no moment with respect to the screen of the element */
+            position: fixed;
+            bottom: 10px;
+            right: 10px
+        }
+
+        .box4{
+            background-color: purple;
+            /* sticky possition sticks the element when move to the(for ex)top , it works relative to its parent */
+            position: sticky;
+            top: 0px;
+            width: 80vs;
+
+        }
+
+        .parent{
+            padding: 3px;
+            margin: 34px;
+            border: 3px solid purple;
+            /* transform, filter, or perspective properties can also make an element appear as positioned  */
+            /* position: absolute; */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+
+        <div class="box box5" style="height: 400px;"></div>
+    </div>
+
+
+    <div style="border: 1px solid; height: 400px; width: 80vw; margin: auto;"></div>
+
+</body>
+</html>

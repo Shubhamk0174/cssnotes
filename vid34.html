@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLoat & Clear</title>
+    <style>
+        /* float help us to align the elements side by side. It is used to align the elements to the left or right side of the container */
+        img{
+            float: right;
+        }
+
+        .cards{
+            border: 2px solid black;
+            /* flow root prevents the image from floating out of the container. */
+            display: flow-root;
+        }
+        .card{
+            border:2px solid red;
+        }
+
+        /* clear helps to clear the float. It is used to clear the float from the left or right side of the container. clear: both; clears the float from both sides of the container. clear: none; does not clear the float. clear: inherit; inherits the clear property from the parent element. clear: initial; sets the clear property to its default value. clear: unset; resets the clear property to its inherited value. */
+        .card:nth-child(3){
+            background-color: aqua;
+            clear: right;
+            /* clear: both; */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <img src="picture-lake.jpg" alt="" style="width:200px;">
+        <div class="card1 card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur illo consectetur asperiores, unde eaque omnis voluptates officiis.</p>
+        </div>
+        <div class="card2 card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, fuga possimus ab voluptatum magni ipsum aliquam dolore dignissimos similique, temporibus harum quidem eveniet deleniti dolor ea architecto quaerat reprehenderit provident excepturi repudiandae, tempore rem saepe hic at! Cum sed repellendus dignissimos aliquid, similique quibusdam tempora. Quia ea pariatur repudiandae neque tenetur animi at consectetur! Voluptatem nemo omnis recusandae sapiente maiores, similique eaque reiciendis modi fugiat tenetur molestiae exercitationem repellendus, facilis dignissimos harum fugit. Eius quo fuga culpa qui distinctio aspernatur sapiente, consequuntur autem quas veniam minus eos ullam et saepe nostrum nihil molestias, quia expedita cupiditate, ad quod dolorem inventore. Quasi itaque temporibus dolorem delectus earum distinctio dolorum repudiandae exercitationem voluptatum nam modi, nobis officia officiis in maiores sunt commodi hic mollitia quis! Nam veritatis dolorum distinctio, repellendus omnis aut autem et cumque, fuga, ab delectus placeat ipsa temporibus excepturi maxime vel laborum inventore officia. Expedita autem consectetur voluptates, odit in obcaecati nam molestias nulla et odio ad iste labore, laudantium facilis natus. Nisi quae quod facilis unde, ipsam optio adipisci ex doloribus! Dicta error sapiente ab cumque pariatur enim aut dolores voluptatem, placeat consequuntur. Necessitatibus enim laboriosam magnam excepturi officiis? Quod optio ea temporibus numquam earum enim minima possimus animi labore laborum, eius quasi voluptas, aspernatur a debitis odio nihil sint? Doloribus assumenda minus, tenetur nemo unde laboriosam nam rerum perferendis voluptatibus a. Error accusamus, impedit possimus quia perferendis facilis iste quis voluptatibus similique, perspiciatis dolorem dicta, nisi temporibus. Veritatis, dolore cum. Deleniti at quis quia iure laborum numquam dolorum eos, illum voluptatem dignissimos natus dolorem ea quod sapiente saepe! Dolores eius quia, voluptas quod, magnam aut nostrum expedita libero sapiente ex dolor? Consequuntur sequi laborum ipsa beatae ipsum, quod explicabo officiis officia deserunt perspiciatis alias molestiae aliquid provident consequatur minima suscipit mollitia exercitationem eius eos. Iure, ex architecto.
+        </div>
+        <div class="card3 card">Card 3</div>
+    </div>
+</body>
+</html>

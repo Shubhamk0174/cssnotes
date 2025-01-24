@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+
+    <style>
+        /* Element selector */
+        div{
+            background-color: red;
+        }
+
+        /* Class selector */
+        .blue{
+            background-color: blue;
+        }
+        
+        /* Id selector */
+        #green{
+            background-color: green;
+        }
+
+
+        /* child selector: applies on direct child*/
+        div > p{
+            color: blue;
+            background-color: bisque;
+        }
+
+
+        /* Descendent Selector : applies on both direct and indirect childs*/
+        div p{
+            color: bisque;
+            background-color: grey;
+        }
+
+
+        /* universal selector: applies to all elements */
+        *{
+        margin: 0;
+        padding: 0;
+        }
+
+        /* Pseudo selector */
+        a:visited{
+            color: green;
+        }
+        a:hover{
+            color: chartreuse;
+        }
+        a:active{   /* when you click on the link */
+            background-color: red;   
+        }
+
+
+        /* first child selector */
+        /* this means whereever p is first child of its parent */
+        p:first-child{
+            background-color: orange;
+        }
+
+        
+        /* Attribute selector */
+        [data-x=a]{
+            background-color: grey;
+        }
+        [atrsel]{       /* this means that if the attribute is used */
+            color: white;
+        }
+
+        
+
+
+                
+    </style>
+
+</head>
+
+<body>
+    <!-- Element Selector -->
+    <div>This is a div tag</div>
+    <div>this is a div tag 2</div>
+
+    <!-- class selector -->
+    <div class="blue">This is another div tag with class = blue</div>
+
+    <!-- id selector  -->
+    <div id="green">this is also a div tag with id = green</div>
+
+    <!-- child Selector -->
+    <div>
+        <p>this is a para tag which is inside of a div i.e. it is a child of a div</p>
+    </div>
+
+    <!-- descendent selector -->
+    <div> 
+        <article>
+            <p>this is an indirect child of div</p>
+        </article>
+    </div>
+
+
+    <!-- Pseudo selector -->
+     <a href="http://www.google.com">Go to Google</a>
+
+
+
+     <main>
+        <p>i am first child</p>
+        <p>i am second child</p>
+     </main>
+
+
+
+     <!-- attribute selector -->
+      <div class="c1" data-x="a" atrsel="yes">This is a div</div>
+
+</body>
+
+</html>

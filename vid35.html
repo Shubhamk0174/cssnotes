@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /* .box:first-child {
+            background-color: red;
+        } */
+
+        /* .box:first-line{
+            color: yellow;
+        } */
+
+        /* select all the elements in the boxes class */
+        .boxes * {
+            border: 2px solid black;
+        }
+
+        p,
+        a,
+        .box,
+        [data-color="primary"] {
+            padding-top: 45px;
+        }
+
+        .box:nth-child(even) {
+            background-color: blue;
+        }
+
+        .box:nth-last-child(1) {
+            color: red;
+        }
+
+        /* before and after is used to add content before and after the element using css. */
+        .boxes::before {
+            content: "this is content add using css before boxes";
+        }
+
+        .box::after {
+            content: "this is content add using css after box";
+        }
+
+        ::selection {
+            background-color: yellow;
+            color: white;
+        }
+
+        .box::first-letter {
+            color: green;
+            font-size: 30px;
+        }
+
+        input::placeholder {
+            color: blue;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div class="box">Hey I am a box Lorem ipsum dolor sit amet consectetur adipisicing elit. Non fugit impedit
+            aspernatur autem ad nemo, dolores porro nam delectus amet. Veritatis eius autem, dolores fugiat recusandae
+            animi optio eveniet modi sit mollitia cumque nobis laudantium sed omnis neque aliquid. Alias pariatur amet
+            sed voluptates quis maxime cupiditate deserunt magni enim. Aperiam mollitia nihil asperiores laboriosam
+            dicta assumenda repellat perspiciatis rerum explicabo voluptatum officia accusantium magni, illum ipsa,
+            architecto minima, sint adipisci! Placeat voluptatibus a error illum consequatur minus, dicta saepe atque
+            sit, expedita culpa quaerat reiciendis aperiam accusamus id ipsam molestias corrupti explicabo sapiente,
+            natus cumque distinctio. Iste, voluptatem consequuntur!</div>
+        <div class="box" data-color="primary">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="type your name here">
+    </div>
+</body>
+
+</html>

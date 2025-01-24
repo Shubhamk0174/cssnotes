@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+
+        /* pixel */
+        .box1 {
+            border: 2px solid black;
+            width: 200px;
+            height: 30px;
+            box-sizing: border-box;
+            background-color: aqua;
+        }
+
+
+        /* vh and vw (view port height and witdth)- adjust the width and height according to size of screen */
+        .box2 {
+            border: 2px solid black;
+            width: 50vw;
+            /* 10 vw means 10% of the view port width */
+            height: 10vh;
+            margin: auto;
+            /* to center the box, it automatically gives the equal margin to both sides*/
+
+            box-sizing: border-box;
+            background-color: aqua;
+        }
+
+        .container {
+            border: 2px solid;
+            background-color: aliceblue;
+            width: 60vw;
+            /* margin short hand property: margin: (upper lower) (left right); */
+            margin: 23px auto;
+        }
+
+
+        .box3 {
+            border: 2px solid black;
+            background-color: antiquewhite;
+            font-size: 15px;
+            height: 80vh;
+        }
+
+        /* em helps in inheriting the font size based on the size of the parent element, 1.5em means 1.5 times the size of the parent element. by default it inherit the same size as of the parent element*/
+        .p1 {
+            font-size: 1.5em;
+        }
+
+        /* rem means root em, it is based on the font size of the root element, i.e. the html element. 1.5rem is equal to the 1.5 times size of the html element. */
+        .p2 {
+            font-size: 1.5rem;
+        }
+
+        /* vmin and vmax, this means which ever is minimum of vh and vw. 100 vmin means 1 times of the minimum*/
+        .cont2 {
+            border: 2px solid black;
+            background-color: red;
+            width: 100vmin;
+            /*on pc height is minimum so it will take 100% of the height */
+            height: 50vmin;
+            margin: 10px auto;
+        }
+
+        /* min-height or min-width sets a minimum height or width for the element, it will not go below that size.         */
+        .cont3 {
+            border: 2px solid black;
+            box-sizing: border-box;
+            background-color: yellow;
+            margin: 23px auto;
+            font-size: 22px;
+            width: 80vw;
+            min-height: 80vh;
+        }
+
+
+        /* %age units gives the size in %age of the parent element, 100% means 100% of the parent element */
+        .cont4 {
+            border: 2px solid black;
+            box-sizing: border-box;
+            background-color: green;
+            margin: 23px auto;
+            font-size: 22px;
+            width: 100%;
+            height: 80%;
+        }
+
+        /* reference for more sizing units: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units */
+
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        this is box1
+    </div>
+
+    <div class="box2">
+        this is box2
+    </div>
+    <span class="box2">
+        this is a span
+        <!-- width, height and margin properties are not applied to the span tag -->
+    </span>
+
+    <div class="container">
+        this is a container
+    </div>
+
+    <div class="box3">
+        this is box3
+        <p class="p1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, unde necessitatibus corrupti sapiente quam
+            quos porro enim modi eos praesentium a ratione id quidem? Itaque aliquid vel officia esse reiciendis. Labore
+            error odio iste!
+        </p>
+        <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, officia!</p>
+    </div>
+
+    <div class="cont2">
+        this is cont2
+    </div>
+
+    <div class="cont3">
+        this is cont3
+    </div>
+
+    <div style="height: 250px; background-color: blueviolet; border: 2px solid; width: 80vw; margin: auto;">
+        <div class="cont4">
+            this is cont4
+            <div style="border: 2px solid; background-color: blue; width: 50%; height: 50%;">
+                this is also a box
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling List using CSS</title>
+
+<style>
+
+    nav ul{
+        display: flex;
+    }
+
+    nav ul li{
+        background-color: yellow;
+        border: 1px solid;
+        margin: 0px 10px;
+        /* list-style is used to change the bullet points of the list to different type */
+        /* list-style: none; */
+        list-style: none;
+    }
+
+    .list1 ul li{
+        border: 1px solid;
+        /* list item properties like backgrouund colour are not applied to the bullet points of the list, by using list style position we can move the postion of bullet points to inside of list items and apply the properties to the bullet points of the list. */
+        background-color: yellow;
+        list-style: devanagari;
+        list-style-position: inside;     
+    }
+
+    .list2 ul li{
+        /* we can use image  or emoji as bullet points of the list */
+        /* list-style-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3NvaXNnM3F1ZnlhMW01MWV4Nno1eTE1aXRrbXU2eHJtZzJ6cmJzOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3vRfNA1p0rvhMSvS/giphy.gif'); */
+        list-style-type: "👉";  /*this can be used to add emojji to marker */
+
+
+        /* short hand syntax */
+        /* list-style: disc inside url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3NvaXNnM3F1ZnlhMW01MWV4Nno1eTE1aXRrbXU2eHJtZzJ6cmJzOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3vRfNA1p0rvhMSvS/giphy.gif"); */
+    }
+    
+
+</style>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <div class="list1">
+        <ul>
+            <li>HOME</li>
+            <li>HOME</li>
+            <li>HOME</li>
+        </ul>
+    </div>
+    
+    <div class="list2">
+        <ul>
+            <li>HOME</li>
+            <li>HOME</li>
+            <li>HOME</li>
+        </ul>
+    </div>
+</body>
+
+</html>

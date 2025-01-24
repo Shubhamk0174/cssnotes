@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity & Cascading</title>
+    <style>
+        /* specificity & cascading means which selector would apply the property on a particular element in case there is a conflict in the properties applied by different selector on a same element */
+        
+        /* !important > Inline style > Id selctor > class or attribute selector > element selector >universal selector  */
+
+        /* effect of possition : for the same type of selector the one which comes at last is considered. */
+
+        h1 {
+            color: aqua;
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        .cpurple {
+            color: purple;
+        }
+
+        .cred {
+            color: red;
+        }
+
+
+        /* we can overwrite specificity by using !important */
+
+        h2{
+            color: grey !important;
+        }
+
+
+        /* specificity calculation
+        assign a value to each part of the selector:-
+        universal selector: 0
+        element selector and pseudo-elements: 1
+        class selectors, attribute selectors, pseudo-classes: 10
+        id selectors: 100
+        inline styles:1000
+        Then, add up the values of all the parts in the selector 
+        here is an example*/
+        /* specificity of below is 1(element)+10(class)=11 */
+        h1.yellow{
+            color: antiquewhite;
+        }
+
+        /* specificity of below is 1(element)+10(class)+10(class)+10(attribute)+10(pseudo)=41 */
+        a.harryclass.rohan-class[href]:hover{
+            color: azure;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="yellow cred cpurple">CSS Specificity</h1>
+        <h1>Css h1</h1>
+        <h1 style="color: blue;">CSS h1</h1>
+
+        <h2 style="color: bisque;">this is a h2 tag</h2>
+    </div>
+</body>
+
+</html>

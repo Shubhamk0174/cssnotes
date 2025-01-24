@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts, Texts & Color</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* we can add font from web using @import url or by adding link tag in head */
+        /* @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap'); */
+
+        h1 {
+            /* font family have fonts which are applied, there are more then fonts in case first is unavailable then others are
+    used */
+            font-family: 'Doto', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+                sans-serif;
+        }
+
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            text-decoration: underline;
+            line-height: 50px;
+            letter-spacing: 10px;
+
+        }
+
+        span {
+            font-family: "Doto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 2px;
+            font-style: normal;
+            font-variation-settings:
+                "ROND" 0;
+        }
+
+        h2 {
+            text-transform: capitalize;
+            text-transform: lowercase;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-color: aqua;
+            text-decoration-style: wavy;
+            text-decoration-thickness: 7px;
+            text-indent: 45px; /*gives indentation*/
+            text-align: center;
+
+        }
+
+        h3{
+            border: 2px solid red;
+            width: 45px;
+            text-overflow: ellipsis;
+            /* text-overflow: clip; */
+            overflow: hidden;
+        }
+
+        h4{
+            border: 2px solid red;
+            width: 145px;
+            overflow: hidden;
+            word-break: break-all;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fonts</h1>
+    <p>This a paragraph</p>
+
+    <span>this is a span tag</span>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum at nulla quaerat ipsa ut? Nam consectetur
+        architecto, delectus atque nobis reiciendis rerum corrupti esse mollitia impedit explicabo maiores dicta ab
+        officia accusantium? Ex aut enim nulla quis facilis! Aperiam sequi molestias optio assumenda sint perferendis!
+    </p>
+
+    <h2>this is h2 tag</h2>
+
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus blanditiis error optio repudiandae est amet quas nulla sit odio exercitationem vero nobis impedit veritatis debitis, unde eveniet sequi fugiat reprehenderit possimus quo praesentium adipisci.</h3>
+
+    <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum modi tenetur quibusdam quod sequi rem fugit odio ipsum, quasi ea! Autem minima necessitatibus sed obcaecati asperiores beatae cumque, pariatur provident cum alias maxime at.</h4>
+</body>
+
+</html>

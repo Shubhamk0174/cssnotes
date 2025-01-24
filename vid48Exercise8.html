@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8</title>
+
+    <style>
+        .bg {
+            border: 1px solid black;
+            width: 95vw;
+            height: 80vh;
+            display: flex;
+            margin: 20px auto;
+            display: flex;
+            align-items: flex-end;
+
+        }
+
+        .ball {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: yaxis,xaxis;
+            animation-duration: 1s,6s;
+            animation-timing-function: cubic-bezier(0.0, 0.0, 0, 0.98),linear;
+            animation-iteration-count: infinite,infinite;
+            animation-direction:alternate, normal;
+        
+        }
+
+        @keyframes yaxis{
+            to{
+                transform: translateY(-70vh);
+                
+            }
+        }
+        @keyframes xaxis{
+            to{
+                transform: translateX(80vw);
+                
+            }
+           
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- transition and animtion -->
+    <!-- create a boundcing ball animation -->
+    <div class="bg">
+        <div class="ball"></div>
+    </div>
+</body>
+
+
+</html>

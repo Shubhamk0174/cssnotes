@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition Property</title>
+
+    <style>
+        .container{
+            background-color: antiquewhite;
+            width: vw;
+            height: 40vh;
+        }
+        .box{
+            background-color: aqua;
+            width: 5vw;
+            height: 4vh;
+            /* to apply transiton to all or more than 2 property changes */
+            /* transition: all; */
+            /* transition: transform, background-color; */
+            transition-property: transform ;
+            transition-duration: 3s;
+
+            /* this function is use to control transition speed at different instance during transition- use dev tool of chrome to under stand it, cubic bezier is the function to manupilate the speed */
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+
+            /* shorthand */
+            /* transition: all 3s ease-in-out 1s; */
+
+        }
+
+        .translate{
+            transform: translateX(10vw) translateY(10vw);
+            background-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+</html>

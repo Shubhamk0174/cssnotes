@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background-color: aqua;
+        }
+        .box1{
+            color: yellow;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid blue;
+            height: 200px; /*total hight(or width)=content + padding + boarder + margin, this can be manupilated by using boxsizing:boarder box*/
+            box-sizing: border-box; /*now total width=given width=content+boarder+Padding , this dosn't include margin*/
+        }
+
+        .box2{
+            color: red;
+            padding: 10px;
+            /* margin overlap for box1 and box2 and thus only the greater margin is applied, this is called margin colapse  */
+            margin: 25px;
+            border: 2px solid black;
+            height: 200px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am also a box</div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* dislplay property: it helps in changing the layout of the element like block, inline, inline-block, none etc. */
+        .box1{
+            border: 2px solid blue;
+            display: inline-block;
+            /* if display property is set to inline then the padding and margin will not work for the top but if we set it to inline-block then it will work. */
+            /* display: block; */
+            padding: 45px;
+            margin: 34px;
+        }
+
+        /* display:none will hide the element completely from the page. it will not take any space on the page. */
+        /* .disnon{  display: none;  } */
+
+
+        /* visiblity: hidden will hide the element but it will leave the space of the element on the page. */
+        /* .vishid{  visibility: hidden;  } */
+
+
+        /* display: flex; it will make the element as a flex container and it will help in aligning the elements in a row or column. */
+        .box4{ 
+            display: flex;
+            /* display: grid;  */
+            width: 80vw;
+            height: 20vh;
+            border: 2px solid red;
+            justify-content: center; /* it will align the element to the center from right and left side of the page */
+            align-items: center; /* it will align the element to the center from top and bottom side of the page */
+        }
+
+        /* reference for more display properties: https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        this is a div
+    </div>
+
+    <div class="box1 disnon vishid">
+        this is also a div 
+    </div>
+
+    <span>I am a good</span>
+    <span>Boy</span>
+
+
+    <div class="box4">this is the box4</div>
+    <div class="box5">this is the box5</div>
+</body>
+</html>

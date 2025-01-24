@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows and Outlines</title>
+
+    <style>
+
+        /* box-shadow: (h-offset) (v-offset) (blur-radius) (spread-radius) (color) inset(shift shadow to inside of box); 
+        similarlty text-shadow is used to give shadow to text*/
+        .box1{
+            border: 2px solid black;
+            padding: 10px;
+            width: 90vw;
+            margin: 20px auto;
+            box-shadow: inset 5px 10px 10px 0px red ;
+            text-shadow: 5px 10px 10px 0px green ;    
+        }  
+
+        .box2{
+            padding: 10px;
+            width: 90vw;
+            margin: auto;
+            text-shadow: 4px 4px 2px green ;
+        }
+
+
+        /* outline is used to give border to the element, it is similar to border but it does not take space in the box model of the element  */
+        .box3{
+            padding: 10px;
+            width: 90vw;
+            margin: auto;
+            outline: 5px solid red;
+            border: 2px solid black;
+            border-radius: 20px;
+            /* outline takes the curve of the boarder and dosen't have border-radius property and also border can have varing width but outline only have uniform width */
+            outline-offset: 20px ; /* it is used to give space between the element and the outline */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        I am a box
+    </div>
+
+    <div class="box2">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nesciunt iure quos nemo fugiat quidem voluptatibus eum nulla repudiandae, eligendi reiciendis enim id!
+    </div>
+
+    <div class="box3">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nesciunt iure quos nemo fugiat quidem voluptatibus eum nulla repudiandae, eligendi reiciendis enim id!
+    </div>
+</body>
+
+</html>

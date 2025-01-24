@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        body {
+            background-color: lightcoral;
+        }
+
+        /*syntax
+        @media not/only mediatype and (expressions){
+            CSS code;
+        } */
+        /* media query is used to make the website responsive and to make it behave differently on different devices. */
+        @media only screen and (max-width: 455px) {
+            body {
+                background-color: lightblue;
+            }
+
+    
+
+            .box {
+                flex-direction: column;
+            }
+
+
+        }
+
+        @media screen and (orientation: landscape){
+            body{
+                border: 2px solid;
+            }
+        }
+
+        /* using media query we can control the way website is displayed on different devices. like we can control the nav bar to be displayed on top on desktop and display when clicked on three dots on mobile devices. */
+
+        /* @media only screen and (max-width ) */
+
+        .box {
+            display: flex;
+        }
+
+      
+
+        .boxes {
+            width: 344px;
+            height: 140px;
+            background-color: lightgreen;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="boxes"></div>
+        <div class="boxes"></div>
+        <div class="boxes"></div>
+    </div>
+</body>
+
+</html>

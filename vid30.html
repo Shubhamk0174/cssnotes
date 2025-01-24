@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+
+    <style>
+        /* we can define the variables in root and then use them using var function*/
+        /* css variables can hold properties and other required variable of the code */
+        /* if we change this variable then the it will change the property whereever it is used */
+        :root{
+            --color: rgb(0, 149, 255);
+            --seccolor:rgb(116, 204, 255);
+
+            --defaultpad: 10px 0px;
+            --defop: 0.5;
+        }
+
+        *{
+            margin: 0;
+            padding: var(--defaultpad);
+        }
+
+        ul{
+            display: flex;
+        }
+
+        ul li{
+            list-style-type: none;
+            padding: 10px;
+            opacity: var(--defop);
+        }
+
+        ul li:first-child{
+            /* we can use local variable, which will override global variable if same */
+            --color: orange;
+            background-color: var(--color);
+        }
+
+        ul li:nth-child(2){
+            /* we can set a default value if in case the variable is not found */
+            background-color: var(--abccolor,aqua);
+        }
+
+        .nav{
+            background-color: var(--color);
+        }
+
+        .container{
+            background-color: var(--seccolor);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur impedit eveniet consectetur quod modi necessitatibus consequuntur est eius repudiandae inventore perspiciatis obcaecati porro sequi illo, facere rerum magni corporis fuga aut doloribus. In consectetur voluptas id, assumenda sint repudiandae cum cupiditate inventore voluptates. Doloremque, quia.
+    </div>
+</body>
+</html>

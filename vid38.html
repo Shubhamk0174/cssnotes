@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+
+    <style>
+        /* flex box property is applied to the parent container */
+
+        .container {
+            border: 2px solid red;
+            height: 80vh;
+            display: flex;
+
+
+            /* justify-content works according to the main axis, for flex direction row the main axis is left to right and cross dirction is up to down and opposite for the column direction  */
+
+
+            /* to make elements horizontally center */
+            justify-content: center;
+
+            /* justify-content: space-around;
+            justify-content: space-between;
+            justify-content: space-evenly; */
+
+
+            /* allign-item works according to the cross axis, for flex direction row the main axis is left to right and cross dirction is up to down and opposite for the column direction  */
+
+            /* to make element verically center, it is used when we have one line */
+            align-items: center;
+
+            /* align-items: baseline; */
+            /* there are many more properties to allign the content in a flex box */
+
+
+            /* flex direction is use to change the direction of the flebox */
+            /* flex-direction: column; */
+
+            /* flex-direction: column-reverse; */
+
+            /* flex-direction: row-reverse; */
+
+
+
+            /* incase of overflow of items we can use flex-wrap which helps in preventing the contents from overlaping by placing then in other row or columns */
+            /* flex-wrap: wrap; */
+
+            /* flex-wrap: wrap-reverse; */
+
+
+            /* to allign multiple lines we use align content */
+            /* their is no justify-items in flexbox */
+            align-content: center;
+
+
+            /* flex-flow: flex-directioin flex-wrap */
+            /* flex-flow: row row-reverse; */
+
+
+            /* gap is used to give a proper gap between the elemets, it can be given seperately to column and row */
+            gap: 30px;
+            /* row-gap: 20px;
+            column-gap: 10px; */
+            /* shorthand */
+            gap: 40px 10px;
+        }
+
+
+
+
+        .item {
+            /* there are some flex properties which are applied to the items */
+            height: 62px;
+            width: 62px;
+            border: 2px solid black;
+            /* margin: 4px; */
+            background-color: violet;
+
+            flex-grow: 1;
+
+
+        }
+
+
+        /* we can define the order of the elements  */
+        /* the elements will be placed according to the order given to their class */
+        /* default order is 0 */
+        /* small order is placed first and in case of conflict they are placed according to which ever comes first or by their default placement */
+        .o1 {
+            order: 1;
+        }
+
+        .o2 {
+            order: 2;
+        }
+
+        .o3 {
+            order: 3;
+        }
+
+
+        /* flex grow helps to define relative width of the elements, it is define for all elements and then for particular elements to make it relative to them */
+        .item1 {
+            flex-grow: 2;
+        }
+
+
+        /* flex-shrink means that this item will shrink with 2 times more speed or 2 times more when the screen is made to shrink */
+        .item2 {
+            flex-shrink: 2;
+        }
+
+
+        /* align self is use to align individual element in cross direction */
+        .item3 {
+            align-self: flex-start;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item">3</div>
+        <div class="item o1">4</div>
+        <div class="item item3">1</div>
+        <div class="item o2">66</div>
+
+
+    </div>
+</body>
+
+</html>

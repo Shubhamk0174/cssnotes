@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Tiny5&display=swap');
+
+        :root {
+            --pricolor: rgb(65, 51, 149);
+            --seccolor: rgb(113, 120, 219);
+            --textcolor: white;
+
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--seccolor);
+        }
+
+        nav {
+            background-color: var(--pricolor);
+            height: 50px;
+            position: sticky;
+            top: 0px;
+        }
+
+        .logo {
+            float: left;
+            margin: 5px 10px 10px 10px;
+            cursor: pointer;
+        }
+
+        .logotext {
+            float: right;
+            font-family: "Doto", serif;
+            font-optical-sizing: auto;
+            font-weight: 1000;
+            font-style: bold;
+            font-size: 25px;
+            padding: 7px 0px 0px 10px;
+            color: var(--textcolor);
+        }
+
+
+
+        .navlist {
+            list-style: none;
+            display: flex;
+            color: var(--textcolor);
+            justify-content: end;
+        }
+
+        .navlist>li {
+            border: 1px solid var(--textcolor);
+            margin: 10px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .navlist>li:hover {
+            position: relative;
+            bottom: 2px;
+        }
+
+
+
+
+
+        .cards {
+            display: flex;
+            width: 97.6vw;
+            border: 1px fsolid black;
+            justify-content: center;
+            /* background-color: green; */
+        }
+
+        .card {
+            width: 42vw;
+            height: 80vh;
+            border: 1px solid black;
+            margin: 20px;
+        }
+
+        .card1 {
+            background-color: lightblue;
+        }
+
+        .card2 {
+            background-color: rgb(211, 211, 196);
+        }
+
+
+        .infocard {
+            background-color: rgb(167, 240, 202);
+            height: 100px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flotinglogo {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            cursor: pointer;
+            :hover{
+                position: relative;
+                bottom: 2.5px;
+            }
+        }
+
+        footer {
+            height: 50px;
+            background-color: var(--pricolor);
+            color: var(--textcolor);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- design the layout as explained in the video -->
+    <nav>
+        <div class="logo">
+            <img src="pikachu.png" alt="PIKAPIKA" height="40px">
+            <div class="logotext">
+                PIKA PIKA
+            </div>
+        </div>
+        <div>
+            <ul class="navlist">
+                <li class="navitem">Home</li>
+                <li class="navitem">Shop</li>
+                <li class="navitem">Contact Us</li>
+                <li class="navitem">About Us</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="cards">
+        <div class="card card1">Hello I am shubham kumar and this is my website</div>
+        <div class="card card2"></div>
+    </div>
+
+    <div class="infocard">
+        <div class="infotext"> Welcome to our WEBSITE</div>
+    </div>
+
+    <div class="flotinglogo">
+        <img src="pikachu.png" alt="" height="40px">
+    </div>
+
+    <footer>
+        <div>
+            PIKA PIKA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspCopyright 2025 &copy;
+        </div>
+        
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+
+    <style>
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            border: 2px solid black;
+
+
+
+            /* rotate function */
+            /* transform: rotate(45deg); */
+            /* 0.25turn means rotate 90 degres */
+            transform: rotate(0.25turn); 
+            transform: rotateX(40deg);
+            /* transform: rotateY(45deg); */
+            /* transform: rotateZ(45deg); */
+
+
+            /* scale funciton- helps to change the size*/
+            
+            transform: scale(1.6);
+
+
+            /* skew */
+            /* this dosent apply to z axis */
+            /* transform: skew(34deg); */
+
+
+            /* translate */
+            transform: translate(100px);
+            transform: translateY(40px);
+
+
+            /* to apply multiple transform properties we apply them as follow */
+            /* transform: translateY(-45%) skewX(40deg) translateX(80%); */
+
+
+            /* to change the origin about which element transform we use:- */
+            transform-origin: -0% -10%;
+            transform: rotate(45deg);
+             
+            
+
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid purple;
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --navcolor: rgb(115, 129, 252);
+            --bodycolor:rgb(118, 154, 255);
+        }
+
+        body{
+            background-color: var(--bodycolor);
+        }
+
+        nav{
+            display: flex;
+            position: sticky;
+            top: 0;
+            background-color: var(--navcolor);
+            color: white;
+            height: 50px;
+            align-items: center;
+        }
+
+        nav > ul{
+            display: flex;
+            position: fixed;
+            right: 10px;
+            padding: 0px 10px;
+            list-style: none;
+            
+        }
+
+        nav > ul > li{
+            margin: 0px 10px;
+            padding: 5px 8px;
+            border: 1px solid white;
+            border-radius: 20px;
+            cursor: pointer;
+            &:hover{
+                position: relative;
+                bottom: 2px;
+            }
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+    <!-- design a navbar with the help of global variable so that its color theme can be change by changing the value of the variable. -->
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Blog</li>
+            <li>Store</li>
+            <li>Contact Us</li>
+            <li>About</li>
+        </ul>
+    </nav>
+</body>
+
+</html>
